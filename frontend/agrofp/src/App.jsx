@@ -14,7 +14,9 @@ import Expert from './components/Expert';
 import Postq from './components/Postq';
 import Userprofile from './components/Userprofile';
 import Articles from './components/Articles';
-import Displayq from './components/displayq';
+//import Displayq from './components/displayq';
+import Displayq from './components/Displayq';
+
 import Postart from './components/Postart';
 import Answerq from './components/Answerq';
 import Viewanswer from './components/Viewanswer';

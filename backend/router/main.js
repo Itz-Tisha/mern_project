@@ -45,9 +45,16 @@
 
 // module.exports = router;
 
-const router = require('./host');
+// const router = require('./host');
+// const express = require('express');
+// const upload = require('../uploadMiddleware');
+
 const express = require('express');
-const upload = require('../uploadMiddleware');
+const router = express.Router();
+const hostRoutes = require('./host');
+
+// ✅ Attach all host-defined routes
+router.use('/', hostRoutes); 
 const {
   home, sign, login, postq, profile, postart, viewarticle,
   displayq, answerq, viewans, editprofile,

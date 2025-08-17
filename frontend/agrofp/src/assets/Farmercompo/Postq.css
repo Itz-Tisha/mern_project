@@ -1,0 +1,233 @@
+/* Postq Component - Minimal Clean Design */
+.postq-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f1f5f9;
+}
+
+.postq-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+}
+
+.postq-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.postq-container input[type="text"],
+.postq-container textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  background: #ffffff;
+  color: #1e293b;
+}
+
+.postq-container input[type="text"]:focus,
+.postq-container textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.postq-container input[type="text"]::placeholder,
+.postq-container textarea::placeholder {
+  color: #94a3b8;
+}
+
+.postq-container textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* File Input Styling */
+.postq-container input[type="file"] {
+  padding: 0.75rem;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.postq-container input[type="file"]:hover {
+  border-color: #667eea;
+  background: #f1f5f9;
+}
+
+.postq-container input[type="file"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Submit Button */
+.postq-container button[type="submit"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.postq-container button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.postq-container button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+.postq-container button[type="submit"]:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Error Message */
+.error-msg {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Image Preview */
+.image-preview {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading State */
+.postq-container button[type="submit"].loading {
+  position: relative;
+  color: transparent;
+}
+
+.postq-container button[type="submit"].loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .postq-container {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .postq-container h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .postq-container form {
+    gap: 1.25rem;
+  }
+  
+  .postq-container input[type="text"],
+  .postq-container textarea {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+  
+  .postq-container button[type="submit"] {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .postq-container {
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  
+  .postq-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .postq-container form {
+    gap: 1rem;
+  }
+  
+  .postq-container input[type="text"],
+  .postq-container textarea {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .postq-container textarea {
+    min-height: 100px;
+  }
+  
+  .postq-container button[type="submit"] {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Focus states for accessibility */
+.postq-container input[type="text"]:focus,
+.postq-container textarea:focus,
+.postq-container input[type="file"]:focus,
+.postq-container button[type="submit"]:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+.postq-container * {
+  transition: all 0.2s ease;
+}

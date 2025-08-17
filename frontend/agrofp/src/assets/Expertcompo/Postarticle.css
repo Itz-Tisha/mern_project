@@ -1,0 +1,469 @@
+/* Postart Component - Minimal Clean Design */
+.postart-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f1f5f9;
+}
+
+.postart-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+}
+
+/* Form Fields */
+.postart-container input[type="text"],
+.postart-container textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  background: #ffffff;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.postart-container input[type="text"]:focus,
+.postart-container textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.postart-container input[type="text"]::placeholder,
+.postart-container textarea::placeholder {
+  color: #94a3b8;
+}
+
+.postart-container textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* File Input Styling */
+.postart-container input[type="file"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.postart-container input[type="file"]:hover {
+  border-color: #667eea;
+  background: #f1f5f9;
+}
+
+.postart-container input[type="file"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Custom file input styling */
+.postart-container input[type="file"]::-webkit-file-upload-button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: background 0.2s ease;
+}
+
+.postart-container input[type="file"]::-webkit-file-upload-button:hover {
+  background: #5a67d8;
+}
+
+/* Image Preview */
+.image-preview {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.image-preview img {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.image-preview img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Submit Button */
+.postart-container button[type="submit"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.postart-container button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.postart-container button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+.postart-container button[type="submit"]:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Error Message */
+.error-message {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Loading State */
+.postart-container button[type="submit"].loading {
+  position: relative;
+  color: transparent;
+}
+
+.postart-container button[type="submit"].loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Form Validation Styles */
+.postart-container input[type="text"].error,
+.postart-container textarea.error {
+  border-color: #dc2626;
+  background: #fef2f2;
+}
+
+.postart-container input[type="text"].error:focus,
+.postart-container textarea.error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Form Labels (if you want to add them later) */
+.postart-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Form Groups (if you want to add them later) */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .postart-container {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .postart-container h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .postart-container input[type="text"],
+  .postart-container textarea {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .postart-container button[type="submit"] {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .image-preview img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .postart-container {
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  
+  .postart-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .postart-container input[type="text"],
+  .postart-container textarea {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .postart-container textarea {
+    min-height: 100px;
+  }
+  
+  .postart-container button[type="submit"] {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .image-preview img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+/* Focus states for accessibility */
+.postart-container input[type="text"]:focus,
+.postart-container textarea:focus,
+.postart-container input[type="file"]:focus,
+.postart-container button[type="submit"]:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+.postart-container * {
+  transition: all 0.2s ease;
+}
+
+/* Animation for form elements */
+.postart-container,
+.postart-container h2,
+.postart-container input[type="text"],
+.postart-container textarea,
+.postart-container input[type="file"],
+.image-preview,
+.postart-container button[type="submit"] {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for form elements */
+.postart-container h2 { animation-delay: 0.1s; }
+.postart-container input[type="text"] { animation-delay: 0.2s; }
+.postart-container textarea { animation-delay: 0.3s; }
+.postart-container input[type="file"] { animation-delay: 0.4s; }
+.image-preview { animation-delay: 0.5s; }
+.postart-container button[type="submit"] { animation-delay: 0.6s; }
+
+/* Hover effects for interactive elements */
+.postart-container input[type="text"]:hover,
+.postart-container textarea:hover {
+  border-color: #cbd5e1;
+}
+
+.postart-container input[type="file"]:hover {
+  border-color: #94a3b8;
+}
+
+/* Custom scrollbar */
+.postart-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.postart-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.postart-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.postart-container::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Success state animation */
+@keyframes successPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.postart-container.success {
+  animation: successPulse 0.6s ease-in-out;
+}
+
+/* Form field focus animation */
+.postart-container input[type="text"]:focus,
+.postart-container textarea:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
+}
+
+/* Button press effect */
+.postart-container button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Form field validation states */
+.postart-container input[type="text"].valid,
+.postart-container textarea.valid {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.postart-container input[type="text"].valid:focus,
+.postart-container textarea.valid:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Loading overlay for form submission */
+.postart-container.submitting {
+  position: relative;
+  pointer-events: none;
+}
+
+.postart-container.submitting::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.postart-container.submitting::before {
+  content: 'Posting article...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Character count (if you want to add it later) */
+.char-count {
+  text-align: right;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+.char-count.warning {
+  color: #f59e0b;
+}
+
+.char-count.error {
+  color: #dc2626;
+}
+
+/* Form field icons (if you want to add them later) */
+.input-group {
+  position: relative;
+}
+
+.input-group input,
+.input-group textarea {
+  padding-left: 2.5rem;
+}
+
+.input-group::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.input-group.title::before {
+  content: '📝';
+}
+
+.input-group.content::before {
+  content: '📄';
+}
+
+.input-group.image::before {
+  content: '🖼️';
+}

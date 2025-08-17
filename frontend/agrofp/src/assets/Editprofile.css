@@ -1,0 +1,333 @@
+/* Editprofile Component - Minimal Clean Design */
+.edit-form {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f1f5f9;
+}
+
+.edit-form h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+}
+
+/* Form Fields */
+.edit-form input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  background: #ffffff;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.edit-form input[type="text"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.edit-form input[type="text"]::placeholder {
+  color: #94a3b8;
+}
+
+/* File Input Styling */
+.edit-form input[type="file"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.edit-form input[type="file"]:hover {
+  border-color: #667eea;
+  background: #f1f5f9;
+}
+
+.edit-form input[type="file"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Custom file input styling */
+.edit-form input[type="file"]::-webkit-file-upload-button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: background 0.2s ease;
+}
+
+.edit-form input[type="file"]::-webkit-file-upload-button:hover {
+  background: #5a67d8;
+}
+
+/* Image Preview */
+.image-preview {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.image-preview img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  border: 4px solid #667eea;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+}
+
+.image-preview img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Submit Button */
+.edit-form button[type="submit"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.edit-form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.edit-form button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+.edit-form button[type="submit"]:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Loading State */
+.edit-form button[type="submit"].loading {
+  position: relative;
+  color: transparent;
+}
+
+.edit-form button[type="submit"].loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Form Labels (if you want to add them later) */
+.edit-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Form Groups (if you want to add them later) */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .edit-form {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .edit-form h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .edit-form input[type="text"],
+  .edit-form input[type="file"] {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .edit-form button[type="submit"] {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .image-preview img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .edit-form {
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  
+  .edit-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .edit-form input[type="text"],
+  .edit-form input[type="file"] {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .edit-form button[type="submit"] {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .image-preview img {
+    max-width: 120px;
+    max-height: 120px;
+  }
+}
+
+/* Focus states for accessibility */
+.edit-form input[type="text"]:focus,
+.edit-form input[type="file"]:focus,
+.edit-form button[type="submit"]:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+.edit-form * {
+  transition: all 0.2s ease;
+}
+
+/* Custom scrollbar */
+.edit-form::-webkit-scrollbar {
+  width: 8px;
+}
+
+.edit-form::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.edit-form::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.edit-form::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animation for form elements */
+.edit-form,
+.edit-form input[type="text"],
+.edit-form input[type="file"],
+.image-preview,
+.edit-form button[type="submit"] {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for form elements */
+.edit-form input[type="text"] { animation-delay: 0.1s; }
+.edit-form input[type="file"] { animation-delay: 0.2s; }
+.image-preview { animation-delay: 0.3s; }
+.edit-form button[type="submit"] { animation-delay: 0.4s; }
+
+/* Hover effects for interactive elements */
+.edit-form input[type="text"]:hover {
+  border-color: #cbd5e1;
+}
+
+.edit-form input[type="file"]:hover {
+  border-color: #94a3b8;
+}
+
+/* Form validation styles (if you want to add them later) */
+.edit-form input[type="text"].error {
+  border-color: #dc2626;
+  background: #fef2f2;
+}
+
+.edit-form input[type="text"].error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Success message styles (if you want to add them later) */
+.success-message {
+  color: #059669;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+}

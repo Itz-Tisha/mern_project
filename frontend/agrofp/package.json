@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "vite": "^6.3.5",
+  "@vitejs/plugin-react": "^4.4.1",
     "multer": "^2.0.2",
     "openai": "^5.12.2",
     "react": "^19.1.0",

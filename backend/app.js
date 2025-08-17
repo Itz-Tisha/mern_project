@@ -75,6 +75,16 @@ app.get('/auth/google/callback',
     }
 );
 
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, '../frontend/agrofp/dist')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../frontend/agrofp/dist/index.html'));
+});
+
+
+
 app.use(router);
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY); 
@@ -96,12 +106,12 @@ app.post("/ask-gemini", async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
-
+const PORT = process.env.PORT || 9579;
 mongoose.connect(dbpath)
     .then(() => {
         console.log('Database connection successful!');
-        app.listen(9579, () => {
-            console.log('Server is running on port 9579');
+         app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
         });
     })
     .catch((err) => {

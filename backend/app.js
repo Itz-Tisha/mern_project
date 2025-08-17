@@ -42,10 +42,14 @@ passport.deserializeUser((id, done) => {
     WebUser.findById(id).then(user => done(null, user));
 });
 
+const CALLBACK_URL = process.env.NODE_ENV === "production"
+  ? "https://mern-project-1-c64t.onrender.com/auth/google/callback"
+  : "http://localhost:9579/auth/google/callback";
+
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:9579/auth/google/callback"
+   callbackURL: CALLBACK_URL
 }, async (accessToken, refreshToken, profile, done) => {
     try {
         let user = await WebUser.findOne({ googleId: profile.id });

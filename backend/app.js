@@ -81,6 +81,8 @@ app.get('/auth/google/callback',
 
 const path = require('path');
 
+app.use(router);
+
 app.use(express.static(path.join(__dirname, '../frontend/agrofp/dist')));
 
 app.get('*', (req, res) => {
@@ -89,7 +91,6 @@ app.get('*', (req, res) => {
 
 
 
-app.use(router);
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY); 
 

@@ -1,7 +1,8 @@
 import React, { useEffect ,useState} from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import '../assets/navbar.css'
+// import '../assets/navbar.css'
+import '../assets/Navbar.css'
 const Farmerheader = () => {
    const navigate = useNavigate();
   const [user, setUser] = useState('');

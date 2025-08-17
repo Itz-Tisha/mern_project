@@ -43,7 +43,7 @@ passport.deserializeUser((id, done) => {
 });
 
 const CALLBACK_URL = process.env.NODE_ENV === "production"
-  ? "https://mern-project-1-c64t.onrender.com/auth/google/callback"
+  ? "https://mern-project-2-o2fe.onrender.com/auth/google/callback"
   : "http://localhost:9579/auth/google/callback";
 
 passport.use(new GoogleStrategy({

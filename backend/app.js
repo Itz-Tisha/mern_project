@@ -213,8 +213,8 @@ app.get('/auth/google/callback',
 );
 
 // ---------- API Routes ----------
-app.use(router);
-
+//app.use(router);
+app.use('/', router);
 // ---------- Gemini AI ----------
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 

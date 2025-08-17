@@ -79,10 +79,10 @@ app.get('/auth/google/callback',
     }
 );
 
-const path = require('path');
+
 
 app.use(router);
-
+const path = require('path');
 app.use(express.static(path.join(__dirname, '../frontend/agrofp/dist')));
 
 app.get('*', (req, res) => {

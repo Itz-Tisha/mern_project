@@ -11,7 +11,8 @@
 - 🌐 **Multilingual Support:** View content in multiple languages. *(Currently under development)*  
 - 🗣 **Text-to-Speech:** Listen to articles, posts, and Q&A answers. *(Currently being implemented)*  
 - 👤 **User Profiles:** Farmers and experts can create and manage profiles.
-- 🌤 **Weather Updates:** Check real-time weather to plan farming activities.   
+- 🌤 **Weather Updates:** Check real-time weather to plan farming activities.
+- 🔑 **Google Login/Signup:** Secure authentication using Google account for easy access. 
 - 🔔 **Notifications:** Stay updated with responses, comments, and new posts.
 - 📱 **Responsive Design:** Works seamlessly on desktop, tablet, and mobile devices.  
 - 🔒 **Secure Authentication:** Protects user data with login and signup.  
@@ -20,8 +21,9 @@
 
 ## 🛠 Technologies Used
 - **Frontend:** HTML, CSS, JavaScript, React  
-- **Backend (Optional):** Node.js, Express, MongoDB / Django  
-- **APIs & Libraries:** Text-to-Speech APIs, Multilingual libraries  
+- **Backend (Optional):** Node.js, Express, MongoDB
+-**APIs & Libraries:** Text-to-Speech APIs, Multilingual libraries, Google Login API
+
 
 ---
 

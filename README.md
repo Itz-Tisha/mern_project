@@ -7,12 +7,12 @@
 ## 🚀 Features
 - 🗨️ **Q&A with Experts:** Ask questions and get answers in real-time.  
 - 📝 **Article Sharing:** Post, read, and share informative articles on farming techniques.  
-- ❤️ **Likes & Comments:** Engage with the community and provide feedback.  
-- 🌐 **Multilingual Support:** Read content in multiple languages with **text-to-speech**.  
-- 📂 **Resource Sharing:** Share guides, videos, and other farming resources.  
-- 👤 **User Profiles:** Farmers and experts can create and manage profiles.  
-- 🔔 **Notifications:** Stay updated with responses, comments, and new posts.  
-- 🔍 **Search Functionality:** Quickly find experts, articles, and resources.  
+- ❤️ **Likes & Comments:** Engage with the community and provide feedback.
+- - 🌐 **Multilingual Support:** View content in multiple languages. *(Currently under development)*  
+- 🗣 **Text-to-Speech:** Listen to articles, posts, and Q&A answers. *(Currently being implemented)*  
+- 👤 **User Profiles:** Farmers and experts can create and manage profiles.
+- 🌤 **Weather Updates:** Check real-time weather to plan farming activities.   
+- 🔔 **Notifications:** Stay updated with responses, comments, and new posts.
 - 📱 **Responsive Design:** Works seamlessly on desktop, tablet, and mobile devices.  
 - 🔒 **Secure Authentication:** Protects user data with login and signup.  
 

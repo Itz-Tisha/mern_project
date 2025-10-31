@@ -185,7 +185,7 @@ const Expertheader = () => {
                           <Link to="/viewweather">AgroWeather</Link>
                           <Link to="/trending_art">Trending Articles</Link>
                        
-                          <Link to="/askai">Ask AI</Link>
+                       
             <GoogleTranslate />
             <Link to="/login">Login</Link>
             <Link to="/sign">Sign Up</Link>

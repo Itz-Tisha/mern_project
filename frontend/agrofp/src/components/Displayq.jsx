@@ -32,7 +32,6 @@ function AnswerQuest(q) {
 }
 
   function viewansfunc(q){
-    console.log("hiiii")
     console.log(q);
     navigate('/viewans',{state:{questionId:q._id}});
   }
@@ -51,7 +50,7 @@ function AnswerQuest(q) {
   <p className="question-title">Title: {q.title}</p>
   <p className="question-content">Question: {q.content}</p>
 
-  {/* Display image if available */}
+  
   {q.image && (
     <div className="question-image">
       <img src={q.image} alt="question" style={{ maxWidth: '300px', maxHeight: '300px' }} />
@@ -64,6 +63,11 @@ function AnswerQuest(q) {
     )}
     <button className="btn-view" onClick={() => viewansfunc(q)}>View answer</button>
   </div>
+
+   {/* <div className="btn-group">
+     <button className="btn-answer" onClick={() => AnswerQuest(q)}>Answer the question</button>
+      <button className="btn-view" onClick={() => viewansfunc(q)}>View answer</button>
+</div> */}
 </div>
 
     ))}

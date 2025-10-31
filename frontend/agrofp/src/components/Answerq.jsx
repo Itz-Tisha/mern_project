@@ -58,7 +58,6 @@ const Answerq = () => {
     <h2>Submit Your Answer</h2>
     {error && <div className="error">{error}</div>}
     <form onSubmit={answersubmit}>
-      {/* Floating label for solution */}
       <div className="input-group">
         <input
           type="text"

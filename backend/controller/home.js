@@ -7,10 +7,10 @@ const session = require('express-session');
 const Articles = require('../models/Articles');
 const Solution = require('../models/Solution')
 const mongoose = require('mongoose');
-
+require('dotenv').config();
+const axios = require('axios');
 const Comments = require('../models/Comments');
 const like = require('../models/Like_articles');
- 
 const notifications = require('../models/Notifications');
 const app = express()
 app.use(express.json());
@@ -20,7 +20,7 @@ exports.home = (req, res) => {
   res.json({ message: "hello from this side!!" });
 };
 
-exports.sign = [
+exports.sign = [//express validator
   check('name')
     .notEmpty()
     .withMessage("First name should not be empty")
@@ -29,6 +29,7 @@ exports.sign = [
     .withMessage("Length is too short, minimum 2 characters")
     .matches(/^[a-zA-Z\s]+$/)
     .withMessage("First name should only contain letters and spaces"),
+
   check('password')
     .notEmpty()
     .withMessage("Password should not be empty")
@@ -44,7 +45,6 @@ exports.sign = [
     .withMessage("Invalid email format")
     .normalizeEmail(),
     
-
   (req, res, next) => {
     const { name,email,password ,usertype} = req.body;
     const errors = validationResult(req);
@@ -79,6 +79,7 @@ exports.login = [
   check('email')
     .notEmpty().withMessage('Email is required')
     .isEmail().withMessage('Invalid email format'),
+
   check('password')
     .notEmpty().withMessage('Password is required'),
 
@@ -245,7 +246,7 @@ exports.displayq = (req,res,next)=>{
   })
 }
 
-exports.answerq = (req, res, next) => {
+exports.answerq = (req, res, next) => {//answer of question
   console.log("reached answerq");
   const { solution, user, post, curuser ,image} = req.body; 
 
@@ -284,7 +285,6 @@ exports.viewans = (req, res, next) => {
   Solution.find({ post: questionId })
     .populate('curuser', 'name') 
     .then((ans) => {
-     
       const updatedAns = ans.map(a => {
         if (!a.curuser) {
           return { ...a.toObject(), curuser: { name: "Unknown" } };
@@ -322,14 +322,14 @@ exports.editprofile = (req, res, next) => {
 
 
 
-exports.getquestions = (req,res,next)=>{
-   const {expertId,userId,expertName,message} = req.body;
-   chat.find({user:userId , expuser:expertId}).then((questions)=>{
-    res.status(200).json({questions:questions})
-   }).catch((err)=>{
-    res.status(500).json({message:"error"})
-   })
-}
+// exports.getquestions = (req,res,next)=>{
+//    const {expertId,userId,expertName,message} = req.body;
+//    chat.find({user:userId , expuser:expertId}).then((questions)=>{
+//     res.status(200).json({questions:questions})
+//    }).catch((err)=>{
+//     res.status(500).json({message:"error"})
+//    })
+// }
 
 exports.postcomments = (req, res, next) => {
   const articleId = req.params.articleId;
@@ -355,6 +355,8 @@ exports.postcomments = (req, res, next) => {
     }); 
 
 }
+
+
 exports.getcomments = (req, res, next) => {
   const articleId = req.params.articleId;
   if (!articleId) {
@@ -460,4 +462,30 @@ exports.delete_notification = (req, res) => {
       console.error("Error deleting notifications:", err);
       res.status(500).json({ error: "Failed to delete notifications" });
     });
+};
+
+exports.detectsisease = async (req, res) => {
+  try {
+    const { images } = req.body;
+
+    if (!images || !Array.isArray(images) || images.length === 0) {
+      return res.status(400).json({ error: 'Invalid input. "images" must be a non-empty array.' });
+    }
+
+    const response = await axios.post(
+      'https://plant.id/api/v3/health_assessment?health=only',
+      { images },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'Api-Key': process.env.PLANT_ID_API_KEY
+        }
+      }
+    );
+
+    res.json(response.data);
+  } catch (err) {
+    console.error('Plant ID API error:', JSON.stringify(err.response?.data || err.message, null, 2));
+    res.status(500).json({ error: err.response?.data || 'Disease detection failed.' });
+  }
 };

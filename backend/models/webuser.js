@@ -3,7 +3,7 @@ const user = new mongo.Schema({
     name:{type:String ,required:true, trim:true,maxLength:20},
     email:{type:String ,required:true, trim:true,unique:true},
     password:{type:String ,required:true, trim:true},
-     usertype: {
+    usertype: {
     type: String,
     required: true,
     enum: ['farmer', 'expert'], 
@@ -16,10 +16,6 @@ user.pre('remove', async function (next) {
     await mongo.model('Post').deleteMany({ user: userId });
     await mongo.model('Solution').deleteMany({ user: userId });
     await mongo.model('Articles').deleteMany({ user: userId });
-    await mongo.model('Chat').deleteMany({ 
-        $or: [{ user: userId }, { expuser: userId }]
-    });
-    next();
 });
 
 module.exports = mongo.model('Webuser',user);

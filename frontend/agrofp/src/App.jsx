@@ -22,7 +22,6 @@ import Editprofile from './components/Editprofile';
 import Viewweather from './components/Viewweather';
 import Comments from './components/Comments';
 import Notification from './components/Notification';
-import Askai from './components/Askai';
 import Trending_art from './components/Trending_art';
 import Diseasedetect from './components/Diseasedetect';
 function App() {
@@ -48,7 +47,6 @@ function App() {
       <Route path="/editprofile" element={<Editprofile />} />
       <Route path="/comments" element={<Comments />} />
       <Route path="/notification" element={<Notification />} />
-      <Route path="/askai" element={<Askai />} />
       <Route path="/trending_art" element={<Trending_art />} />
       <Route path="/DiseaseDetection" element={<Diseasedetect />} />
       

@@ -8,10 +8,10 @@ const Postq = () => {
   const navigate = useNavigate();
   const [title, settitle] = useState('')
   const [content, setcontent] = useState('')
-  const [image, setimage] = useState('') // store base64 string
+  const [image, setimage] = useState('') 
   const [error, seterror] = useState('')
 
-  // convert selected file to base64
+  
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;

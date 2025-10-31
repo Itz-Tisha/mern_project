@@ -39,7 +39,7 @@ const Home = () => {
       <header className="hero-section">
         <h1>Welcome to AgroConnect</h1>
         <p>Connecting Farmers and Agricultural Experts</p>
-
+        
         
       </header>
 

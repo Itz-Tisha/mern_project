@@ -12,7 +12,6 @@
 - 🗣 **Text-to-Speech:** Listen to articles, posts, and Q&A answers. *(Currently being implemented)*  
 - 👤 **User Profiles:** Farmers and experts can create and manage profiles.
 - 🌤 **Weather Updates:** Check real-time weather to plan farming activities.
-- 🔑 **Google Login/Signup:** Secure authentication using Google account for easy access. 
 - 🔔 **Notifications:** Stay updated with responses, comments, and new posts.
 - 📱 **Responsive Design:** Works seamlessly on desktop, tablet, and mobile devices.  
 - 🔒 **Secure Authentication:** Protects user data with login and signup.  

@@ -69,12 +69,7 @@ const Sign = () => {
         </select>
 
         <button type="submit">Sign Up</button>
-         <button 
-    type="button"
-    onClick={() => window.location.href = "http://localhost:9579/auth/google"}
->
-    Sign up with Google
-</button>
+       
         <p>Already have an account? <Link to='/login'>Login</Link></p>
         {error && <p>{error}</p>}
       </form>

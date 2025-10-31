@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Expertheader from './Expertheader';
 import Farmerheader from './Farmerheader';
-import '../assets/Userprofile.css'; // Create this file for custom styles
+import '../assets/Userprofile.css'; 
 
 const Userprofile = () => {
   const navigate = useNavigate();
@@ -56,12 +56,11 @@ const Userprofile = () => {
 
         {user.usertype === 'farmer' ? (
           <>
-            {/* Asked Questions */}
             <h3>Your Asked Questions</h3>
             {posts.length > 0 ? (
               <ul className="user-posts">
                 {posts.map((p, ind) => (
-                  <li key={ind} className="post-item">{p.content}</li>
+                  <li key={ind} className="post-item">{p.title}</li>
                 ))}
               </ul>
             ) : (

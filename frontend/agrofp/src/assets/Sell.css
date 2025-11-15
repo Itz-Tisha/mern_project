@@ -1,0 +1,103 @@
+/* === Page Layout === */
+.sell-page {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f9f4;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Header === */
+.sell-page .sell-header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* === Container === */
+.sell-page .sell-container {
+  max-width: 600px;
+  background: white;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === Title === */
+.sell-page .sell-title {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+/* === Form Elements === */
+.sell-page label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.sell-page input,
+.sell-page select,
+.sell-page textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.sell-page input:focus,
+.sell-page select:focus,
+.sell-page textarea:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 4px rgba(46, 125, 50, 0.4);
+}
+
+.sell-page textarea {
+  resize: vertical;
+}
+
+/* === Button === */
+.sell-page button {
+  background-color: #2e7d32;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.sell-page button:hover {
+  background-color: #256428;
+}
+
+/* === Image Input === */
+.sell-page input[type="file"] {
+  padding: 0.4rem;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .sell-page .sell-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .sell-page .sell-header {
+    font-size: 1.3rem;
+  }
+}

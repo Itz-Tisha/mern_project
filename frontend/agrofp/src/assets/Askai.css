@@ -1,0 +1,327 @@
+/* AskAI Component Styles - Minimal Clean Design */
+.askai-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Main Content Area */
+.askai-content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+/* Header Section */
+.askai-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.askai-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.askai-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: 400;
+}
+
+/* AI Icon */
+.askai-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background: #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Input Section */
+.input-section {
+  margin-bottom: 2rem;
+}
+
+.askai-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.2s ease;
+  background: #ffffff;
+  color: #1e293b;
+  line-height: 1.5;
+}
+
+.askai-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.askai-textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Ask Button */
+.ask-button {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.ask-button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.ask-button:active {
+  transform: translateY(0);
+}
+
+.ask-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Chat History */
+.chat-history {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.chat-item {
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.chat-question {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid #3b82f6;
+}
+
+.chat-question-text {
+  color: #1e293b;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.chat-answer {
+  background: #fef3c7;
+  border-radius: 12px;
+  padding: 1rem;
+  border-left: 4px solid #f59e0b;
+}
+
+.chat-answer-text {
+  color: #92400e;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.chat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chat-question .chat-label {
+  color: #3b82f6;
+}
+
+.chat-answer .chat-label {
+  color: #f59e0b;
+}
+
+.chat-question .chat-label::before {
+  content: '👤';
+  font-size: 0.8rem;
+}
+
+.chat-answer .chat-label::before {
+  content: '🤖';
+  font-size: 0.8rem;
+}
+
+/* Loading State */
+.ask-button.loading {
+  position: relative;
+  color: transparent;
+}
+
+.ask-button.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .askai-container {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+  
+  .askai-content {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .askai-title {
+    font-size: 1.75rem;
+  }
+  
+  .askai-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+  
+  .askai-textarea {
+    min-height: 80px;
+    padding: 0.875rem;
+  }
+  
+  .ask-button {
+    padding: 0.75rem 1.25rem;
+  }
+  
+  .chat-history {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .askai-container {
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+  }
+  
+  .askai-content {
+    padding: 1.25rem;
+    border-radius: 10px;
+  }
+  
+  .askai-title {
+    font-size: 1.5rem;
+  }
+  
+  .askai-textarea {
+    min-height: 70px;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+  
+  .ask-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .chat-history {
+    max-height: 250px;
+  }
+}
+
+/* Focus states for accessibility */
+.askai-textarea:focus,
+.ask-button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+.chat-history::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-history::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.chat-history::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Empty state */
+.chat-history:empty::after {
+  content: 'No conversations yet. Ask your first question!';
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  color: #94a3b8;
+  font-style: italic;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 2px dashed #e2e8f0;
+}

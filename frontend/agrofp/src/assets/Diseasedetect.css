@@ -1,0 +1,22 @@
+.detect-btn {
+  background: linear-gradient(135deg, #34d399, #059669);
+  color: white;
+  padding: 10px 26px;
+  border: none;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.detect-btn:hover {
+  background: linear-gradient(135deg, #10b981, #047857);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.detect-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

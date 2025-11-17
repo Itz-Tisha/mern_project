@@ -16,7 +16,7 @@ const Diseasedetect = () => {
   }
 }, []);
 
-  // Convert uploaded image to base64
+  
   const toBase64 = (file) => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
@@ -39,16 +39,7 @@ const Diseasedetect = () => {
         images: [base64Image],
       };
 
-      // const response = await axios.post(
-      //   'https://plant.id/api/v3/health_assessment?health=only',
-      //   requestBody,
-      //   {
-      //     headers: {
-      //       'Content-Type': 'application/json',
-      //       'Api-Key': 'nQa4Ok2DrO0VuQYs3SnmAlzAEYKtTPDWn4J5xjCmCT8fo0RSYh' 
-      //     }
-      //   }
-      // );
+     
       const response = await axios.post('http://localhost:9579/detect-disease', requestBody);
 
 

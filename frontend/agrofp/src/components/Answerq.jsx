@@ -69,7 +69,7 @@ const Answerq = () => {
         <label>Type your answer here</label>
       </div>
 
-      {/* Floating label for image */}
+    
       <div className="input-group">
         <input
           type="file"
@@ -82,7 +82,7 @@ const Answerq = () => {
       <button type="submit" className="submit-btn">Submit Answer</button>
     </form>
 
-    {/* Image preview */}
+  
     {image && (
       <div className="image-preview">
         <img src={image} alt="Preview" />

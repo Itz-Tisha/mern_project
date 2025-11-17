@@ -36,7 +36,15 @@ git clone <repository-url>
 
 Extract it to your desired location.
 
-2️⃣ Setup Backend
+2️⃣ Navigate to the folder:
+
+cd mern_project-main/
+
+3️⃣ Restore Database Backup 
+
+mongorestore --db Agroconnect ./db-backup/Agroconnect
+
+4️⃣ Setup Backend
 
 Navigate to the backend folder:
 
@@ -53,7 +61,7 @@ Start the backend server:
 npm start
 
 
-3️⃣ Setup Frontend
+5️⃣ Setup Frontend
 
 cd mern_project-main/frontend/agrofp
 
@@ -68,9 +76,5 @@ Start the frontend development server:
 npm run dev
 
 
-4️⃣ Restore Database Backup 
 
-mongorestore --db Agroconnect ./db-backup/Agroconnect
-
-
-5️⃣ Access the Application
+6️⃣ Access the Application

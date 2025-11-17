@@ -28,7 +28,7 @@ const Comments = () => {
       return;
     }
 
-    // Fetch comments
+   
     axios.get(`http://localhost:9579/comments/${articleId}`)
       .then((res) => {
         console.log(res.data.comments);

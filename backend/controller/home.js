@@ -320,17 +320,6 @@ exports.editprofile = (req, res, next) => {
 
 
 
-
-
-// exports.getquestions = (req,res,next)=>{
-//    const {expertId,userId,expertName,message} = req.body;
-//    chat.find({user:userId , expuser:expertId}).then((questions)=>{
-//     res.status(200).json({questions:questions})
-//    }).catch((err)=>{
-//     res.status(500).json({message:"error"})
-//    })
-// }
-
 exports.postcomments = (req, res, next) => {
   const articleId = req.params.articleId;
   const { text, userId } = req.body;

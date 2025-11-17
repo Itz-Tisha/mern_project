@@ -7,26 +7,7 @@ const Notification = () => {
   const [notifications, setNotifications] = useState([]);
   const [error, setError] = useState('');
 const [usertype, setusertype] = useState('')
-  // useEffect(() => {
-  //   const storedUser = JSON.parse(localStorage.getItem('user'));
-  //   if(storedUser) {
-  //     setusertype(storedUser.usertype);
-  //   }
 
-  //   const userId = storedUser._id;
-
-  //   axios.get(`http://localhost:9579/notifications/${userId}`)
-  //     .then((res) => {
-  //       if (res.data.notifications) {
-  //         setNotifications(res.data.notifications);
-  //       } else {
-  //         setError('No notifications found');
-  //       }
-  //     })
-  //     .catch((err) => {
-  //       setError('Failed to fetch notifications');
-  //     });
-  // }, []);
 
 useEffect(() => {
   const storedUser = JSON.parse(localStorage.getItem('user'));

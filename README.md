@@ -27,19 +27,50 @@
 ---
 
 ## ⚡ Installation
-1. Clone the repository:  
-   ```bash
-   git clone <repository-url>
-Navigate to the project folder:
+1️⃣ Download the Project
 
-cd AgroConnect
+Download the project ZIP or clone the repository:
+
+git clone <repository-url>
 
 
-Install dependencies:
+Extract it to your desired location.
+
+2️⃣ Setup Backend
+
+Navigate to the backend folder:
+
+cd mern_project-main/backend
+
+
+Install backend dependencies:
 
 npm install
 
 
-Start the development server:
+Start the backend server:
 
 npm start
+
+
+3️⃣ Setup Frontend
+
+cd mern_project-main/frontend/agrofp
+
+
+Install frontend dependencies:
+
+npm install
+
+
+Start the frontend development server:
+
+npm run dev
+
+
+4️⃣ Restore Database Backup 
+
+mongorestore --db Agroconnect ./db-backup/Agroconnect
+
+
+5️⃣ Access the Application

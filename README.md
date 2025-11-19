@@ -26,6 +26,19 @@
 
 ---
 
+Inside the backend/ folder, create a file named .env and add the following variables:
+GOOGLE_API_KEY=AIzaSyDPPJbrwPAh24d0cmri9M_VFthA4QD76iQ
+DB_PATH=mongodb+srv://root:root@clusteragro1.f6e45ay.mongodb.net/AgroConnect?retryWrites=true&w=majority
+SESSION_SECRET=agroconnect
+PLANT_ID_API_KEY=nQa4Ok2DrO0VuQYs3SnmAlzAEYKtTPDWn4J5xjCmCT8fo0RSYh
+
+
+You can refer to .env.example for the required variable names.
+
+Inside the frontend/ folder, create a file named .env and add:
+VITE_WEATHER_API_KEY=782ea76044733a5f89ce5e486fd8c524
+
+
 ## ⚡ Installation
 1️⃣ Download the Project
 

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const upload = require('../uploadMiddleware');
+
 const { 
   home, sign, login, postq, profile, postart, viewarticle, displayq, answerq, 
   viewans, editprofile,  postcomments, getcomments, likearticle, 

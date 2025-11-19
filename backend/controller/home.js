@@ -453,7 +453,7 @@ exports.delete_notification = (req, res) => {
     });
 };
 
-exports.detectsisease = async (req, res) => {
+exports.detectdisease = async (req, res) => {
   try {
     const { images } = req.body;
 

@@ -26,6 +26,24 @@
 
 ---
 
+## Backend Environment Variables
+
+Create a file named `.env` inside the backend folder and add:
+
+GOOGLE_API_KEY=your-google-api-key
+DB_PATH=your-mongodb-connection-string
+SESSION_SECRET=your-session-secret
+PLANT_ID_API_KEY=your-plant-id-api-key
+
+Refer to backend/.env.example for variable names.
+
+---
+
+## Frontend Environment Variables
+
+Create a file named `.env` inside the frontend folder and add:
+
+VITE_WEATHER_API_KEY=your-weather-api-key
 
 
 

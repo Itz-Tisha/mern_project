@@ -23,7 +23,7 @@ router.get('/comments/:articleId', getcomments);
 router.post('/like/:articleId', likearticle);
 router.get('/notifications/:userId', notify);
 router.get('/trending_art', trending_art);
-router.post('/detect-disease', detectsisease);
+router.post('/detect-disease', detectdisease);
 router.delete('/notifications/:userId', delete_notification);
 
 module.exports = router;
